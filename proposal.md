@@ -1,36 +1,35 @@
-# My Little Pony Infection Game
+# Garfiled Lasagna Feast
 
 ## Repository
-<https://github.com/kcastro135/MLP-Infection-Game.git>
+<https://github.com/kcastro135/Garfield-Food-Chase-Game.git>
 
 ## Description
-This is based on a tiktok trend that involves the My little pony charcaters in a horror themed AU. It will involve the player playing
-as Twilight Sparkle and you are given choices. I entend to have three out comes, the good ending, the bad ending, and the canon ending.
+Just a goofy little game to have the player collect lasagna to please Garfile.
 
 ## Features
 - Pixelish style
-	- The characters will look stylized in a pixels artstyle, like a retro game and it will have on screen dialog.
+	- The characters will look stylized in a pixels artstyle, like a retro game
 - Options
-	- Each option will end up giving the user three different endings depending on their choices
+	- Collect 30 lasganas to win the game
 - 
-	- Each choice causes a different outcome
+	- Avoid Nermal
 
 ## Challenges
-- The amount of choices that I need to make. I will have to branch them out and that will evaluate the ending
+- Adding boosts and multiple obsitcales
 - I'm planning on making the art myself, so I need to start storyboarding and writing everything
 - Any errors could throw off my coding and I need to be very specific with the commands
 
 ## Outcomes
 Ideal Outcome:
-- I want the game to come out looking like those choice horror games that are mainly still images, sounds, dialog, and choices. Sort of like the game Homicipher and The Walten Files. I want each choice to be hard on the player as well as have good visuals(for what I can do).
+- I want Garfield to be allowed to interact with the enviorment, while avoiding nermal. Some objects gives him boosts.
 
 Minimal Viable Outcome:
-- The bare minimal would be the texts, very pixaled characters and instead of three endings it would be two.
+- The bare minimal would be just getting the lasgana while avoiding nermal
 
 ## Milestones
 
 - Week 1
-  1. Writing the choices and how they branch out
+  1. Getting the pngs
   2. Getting started on the look as well as coding the basic skeleton
 
 - Week 2
