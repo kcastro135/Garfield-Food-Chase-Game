@@ -3,15 +3,13 @@ import random
 import sys
 import os
 
-# Initialize Pygame
 pygame.init()
 
-# Screen settings
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Collect & Avoid Game")
 
-# Game settings
+
 FPS = 60
 PLAYER_SPEED = 5
 POINT_SPEED = 5
@@ -19,12 +17,12 @@ OBSTACLE_SPEED = 7
 POINT_SPAWN_RATE = 30
 OBSTACLE_SPAWN_RATE = 60
 
-# Fonts
+
 font = pygame.font.SysFont("Arial", 48, bold=True)       # Game font
 lose_font = pygame.font.SysFont("Arial", 36, bold=True)  # Lose screen font
 clock = pygame.time.Clock()
 
-# Load images
+
 home_screen_image = pygame.image.load("home_screen.png").convert()
 lose_screen_image = pygame.image.load("lose_screen.png").convert()
 background_image = pygame.image.load("background.png").convert()
@@ -32,7 +30,6 @@ SPRITE_SHEET = pygame.image.load("JumpCabt.png").convert_alpha()
 LASGNA_IMAGE = pygame.transform.scale(pygame.image.load("lasagna.png").convert_alpha(), (40, 40))
 NERMAL_IMAGE = pygame.transform.scale(pygame.image.load("nermal.png").convert_alpha(), (50, 50))
 
-# Load character frames
 FRAME_WIDTH, FRAME_HEIGHT, NUM_FRAMES = 44, 32, 8
 
 def load_frames(sheet, num_frames, frame_width, frame_height, scale=2):
@@ -46,7 +43,7 @@ def load_frames(sheet, num_frames, frame_width, frame_height, scale=2):
 
 CHARACTER_FRAMES = load_frames(SPRITE_SHEET, NUM_FRAMES, FRAME_WIDTH, FRAME_HEIGHT)
 
-# Load victory frames
+
 VICTORY_FOLDER = "victory_frames"
 VICTORY_FRAMES = []
 i = 0
@@ -58,7 +55,7 @@ while True:
     else:
         break
 
-# --- Classes ---
+
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
@@ -112,7 +109,7 @@ class Obstacle(pygame.sprite.Sprite):
         if self.rect.right < 0:
             self.kill()
 
-# --- Screens ---
+
 def show_victory():
     for _ in range(3):
         for frame in VICTORY_FRAMES:
@@ -145,7 +142,7 @@ def wait_for_key():
             elif event.type == pygame.KEYDOWN:
                 return
 
-# --- Main Game Loop ---
+
 def main():
     show_main_menu()
 
@@ -190,8 +187,8 @@ def main():
         collected = pygame.sprite.spritecollide(player, point_group, True)
         score += len(collected)
 
-        # --- Drawing ---
-        screen.blit(background_image, (0, 0))  # <-- Background here
+
+        screen.blit(background_image, (0, 0)) 
         all_sprites.draw(screen)
         score_text = font.render(f"Score: {score}", True, (255, 255, 255))
         screen.blit(score_text, (10, 10))
